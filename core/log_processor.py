@@ -84,9 +84,7 @@ class LogProcessor:
             self.process_data(self._previous_file, False)
             # Reset for the new file and read from the beginning.
             self._last_read_file_pos = 0
-            self.process_data(self._current_file, True)
-        else:
-            self.process_data(self._current_file, True)
+        self.process_data(self._current_file, True)
 
     def process_data(self, file_name, is_store_last_read_position):
         """
